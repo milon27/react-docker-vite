@@ -1,5 +1,5 @@
 # # ------------------dev -------------------
-FROM node:16.10.0-alpine as build_dev
+FROM node:18.13.0-alpine as build_dev
 RUN npm install -g pnpm
 
 WORKDIR /app
@@ -15,7 +15,7 @@ COPY .env.dev .env
 RUN npm run build
 
 # # ------------------staging -------------------
-FROM node:16.10.0-alpine as build_staging
+FROM node:18.13.0-alpine as build_staging
 RUN npm install -g pnpm
 
 WORKDIR /app
