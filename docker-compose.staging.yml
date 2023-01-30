@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  react_test:
+    container_name: react_test
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: staging
+    ports:
+      - 3000:80
